@@ -1,4 +1,3 @@
-# tekoälyä on käytetty tehtävien tekemisessä
 # Tehtävä 1
 from flask import Flask, request, jsonify   # Flask: web-sovelluskehys, jolla rakennetaan API
                                             # Request: flaskin osa jolla saadaa HTTP-pyynnön sisältö
@@ -117,3 +116,4 @@ def purchase_book(item_id):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
