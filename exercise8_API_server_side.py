@@ -38,7 +38,7 @@ def sell_book():
 
     # Tarkistetaan että JSON sisältää tarvittavat kentät. 
     # If not data = data on tyhjä tai None
-    # not all = jos yksikin kenttä puuttuu, palauttee False
+    # not all = jos yksikin kenttä puuttuu, palauttaa False
     if not data or not all(k in data for k in ("title", "author", "year_of_publication")):
         return jsonify({"error": "Missing fields"}), 400
 
@@ -116,4 +116,5 @@ def purchase_book(item_id):
 
 if __name__ == '__main__':
     app.run(debug=True)
+
 
