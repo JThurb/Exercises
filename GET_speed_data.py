@@ -11,7 +11,7 @@ response = requests.get(api_url)
 if response.status_code == 200:
     data = response.json()  # Puts the json formatted data to Python object
     
-# searches trough the station_data which was formed in upper code
+# searches trough the station_data which was formed above
 if data:
     # Collects sensors 5056 and 5057
     speeds = []
@@ -29,4 +29,5 @@ if data:
     else:
         print(f"Could't find sensors 5056 and 5057 from {station_id}.")
 else:
-    print(f"Asemaa id:llä {station_id} ei löytynyt.")
+    print(f"Station ID: {station_id} was not found")
+
